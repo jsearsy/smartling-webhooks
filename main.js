@@ -7,11 +7,11 @@ function createNestedKeyValuePairs (topLevelKey, array) {
   }, [])
 }
 
-function createPostBodyString (responseBody) {
+function createPostBodyString (postBody) {
   // see Signing Procedure > POST
   // https://help.smartling.com/hc/en-us/articles/360007829194-Callbacks-and-Webhooks
 
-  return Object.entries(responseBody)
+  return Object.entries(postBody)
     .reduce((prev, curr) => {
       const [key, value] = curr
 
@@ -31,8 +31,14 @@ function digestPostBody (postBodyString, SECRET_KEY) {
   return hmac.digest('base64')
 }
 
-module.exports.isValidSignature = function (postSignature, responseBody, SECRET_KEY) {
-  const postBodyString = createPostBodyString(responseBody)
+/**
+ * Returns a boolean indicating Smartling webhook POST body authenticity
+ * @param {string} postSignature - value of X-Smartling-Signature header
+ * @param {object} postBody - POST request body
+ * @param {string} SECRET_KEY - signed request secretKey
+ */
+module.exports.isValidSignature = function (postSignature, postBody, SECRET_KEY) {
+  const postBodyString = createPostBodyString(postBody)
   const digest = digestPostBody(postBodyString, SECRET_KEY)
   return postSignature === digest
 }
