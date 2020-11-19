@@ -1,0 +1,16 @@
+{
+  "name": "smartling-webhooks",
+  "version": "0.0.1",
+  "description": "Smartling webhook library",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsearsy/smartling-webhooks.git"
+  },
+  "author": "jsearsy <Jason Sears>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsearsy/smartling-webhooks/issues"
+  },
+  "homepage": "https://github.com/jsearsy/smartling-webhooks#readme"
+}
