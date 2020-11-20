@@ -1,3 +1,5 @@
+const crypto = require('crypto')
+
 function createNestedKeyValuePairs (topLevelKey, array) {
   return array.reduce((prev, curr, idx) => {
     const pairs = Object.entries(curr).map(([k, v]) => {
