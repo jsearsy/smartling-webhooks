@@ -5,16 +5,25 @@ Library for handling Smartling webhooks
 `npm i smartling-webhooks`
 
 ## Use
-`isValidSignature()` validates signed POST requests
+`isAuthenticGetRequest()` returns a boolean indicating Smartling webhook GET callback authenticity
 
-```
+```javascript
 /**
- * Returns a boolean indicating Smartling webhook POST body authenticity
- * @param {string} postSignature - value of X-Smartling-Signature header
- * @param {object} postBody - POST request body
+ * @param {object} callbackUrl - callback url with query parameters
+ * @param {string} headerSignature - value of X-Smartling-Signature header
  * @param {string} SECRET_KEY - signed request secretKey
  */
- ```
+```
+
+`isAuthenticPostRequest()` returns a boolean indicating Smartling webhook POST body authenticity
+
+```javascript
+/**
+ * @param {object} postBody - POST request body
+ * @param {string} headerSignature - value of X-Smartling-Signature header
+ * @param {string} SECRET_KEY - signed request secretKey
+ */
+```
 
  ## Documentation
  https://help.smartling.com/hc/en-us/articles/360007829194-Callbacks-and-Webhooks
