@@ -48,7 +48,7 @@ module.exports.isAuthenticPostRequest = function (postBody, headerSignature, SEC
 
 /**
  * Returns a boolean indicating Smartling webhook GET callback authenticity
- * @param {object} callbackUrl - callback url with query parameters
+ * @param {string} callbackUrl - callback url with query parameters
  * @param {string} headerSignature - value of X-Smartling-Signature header
  * @param {string} SECRET_KEY - signed request secretKey
  */

@@ -9,7 +9,7 @@ Library for handling Smartling webhooks
 
 ```javascript
 /**
- * @param {object} callbackUrl - callback url with query parameters
+ * @param {string} callbackUrl - callback url with query parameters
  * @param {string} headerSignature - value of X-Smartling-Signature header
  * @param {string} SECRET_KEY - signed request secretKey
  */
