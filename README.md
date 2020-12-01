@@ -2,7 +2,7 @@
 ![npm](https://img.shields.io/npm/dt/smartling-webhooks)
 ![npm](https://img.shields.io/npm/l/smartling-webhooks)
 
-Library for handling Smartling webhooks
+Library for verifying signed Smartling webhooks
 
 ## Installation
 `npm i smartling-webhooks`
