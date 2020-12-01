@@ -1,5 +1,4 @@
 # smartling-webhooks
-![npm bundle size (version)](https://img.shields.io/bundlephobia/min/smartling-webhooks/2.0.1)
 ![npm](https://img.shields.io/npm/dt/smartling-webhooks)
 ![npm](https://img.shields.io/npm/l/smartling-webhooks)
 
